@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmCare AI | Smart Farming Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🌾 FarmCare <span>AI</span></div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#crops">Crop Guide</a>
+        <a href="#disease">Plant Health</a>
+        <a href="#weather">Weather</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="tag">🌱 SMART AGRICULTURE PLATFORM</p>
+        <h1>Smart Farming for a<br><span>Better Tomorrow</span></h1>
+        <p>
+            Make informed farming decisions with crop guidance,
+            plant health information and weather updates.
+        </p>
+        <a href="#crops" class="btn">Explore FarmCare →</a>
+    </div>
+    <div class="hero-icon">🌾</div>
+</section>
+
+<section class="stats">
+    <div class="stat-card">
+        <h2>🌱</h2>
+        <h3>Crop Guide</h3>
+        <p>Explore crop options</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>🍃</h2>
+        <h3>Plant Health</h3>
+        <p>Learn about crop diseases</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>🌦️</h2>
+        <h3>Weather</h3>
+        <p>Check local conditions</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>💧</h2>
+        <h3>Irrigation</h3>
+        <p>Get watering guidance</p>
+    </div>
+</section>
+
+<section class="section" id="crops">
+    <div class="section-heading">
+        <p class="tag">PERSONALIZED FARMING</p>
+        <h2>Crop Recommendation 🌱</h2>
+        <p>Explore possible crops based on your selections.</p>
+    </div>
+
+    <div class="panel">
+        <label for="soil">Select soil type</label>
+        <select id="soil">
+            <option value="all">All soil types</option>
+            <option value="clay">Clay soil</option>
+            <option value="loamy">Loamy soil</option>
+            <option value="sandy">Sandy soil</option>
+            <option value="black">Black soil</option>
+        </select>
+
+        <label for="season">Select season</label>
+        <select id="season">
+            <option value="all">Any season</option>
+            <option value="kharif">Kharif (monsoon)</option>
+            <option value="rabi">Rabi (winter)</option>
+            <option value="summer">Summer</option>
+        </select>
+
+        <button class="btn" onclick="recommendCrops()">
+            Find Suitable Crops
+        </button>
+
+        <div id="cropResults" class="results">
+            Choose your soil and season to explore crop options.
+        </div>
+    </div>
+    <p class="note">
+        Note: These are general examples, not scientific predictions.
+        Confirm local suitability with an agricultural expert.
+    </p>
+</section>
+
+<section class="section light" id="disease">
+    <div class="section-heading">
+        <p class="tag">PLANT HEALTH CENTER</p>
+        <h2>Crop Disease Guide 🍃</h2>
+        <p>Learn about common crop diseases and preventive practices.</p>
+    </div>
+
+    <div class="disease-grid">
+        <div class="disease-card">
+            <div class="disease-icon">🍅</div>
+            <h3>Tomato Early Blight</h3>
+            <p>Symptoms: Brown spots, often with concentric rings,
+               on older leaves.</p>
+            <button onclick="showDisease('tomato')">Learn More →</button>
+        </div>
+
+        <div class="disease-card">
+            <div class="disease-icon">🌾</div>
+            <h3>Rice Blast</h3>
+            <p>Symptoms: Spindle-shaped lesions may appear on rice
+               leaves and other plant parts.</p>
+            <button onclick="showDisease('rice')">Learn More →</button>
+        </div>
+
+        <div class="disease-card">
+            <div class="disease-icon">🍃</div>
+            <h3>Powdery Mildew</h3>
+            <p>Symptoms: White, powder-like patches on leaf surfaces.</p>
+            <button onclick="showDisease('mildew')">Learn More →</button>
+        </div>
+    </div>
+
+    <div id="diseaseInfo" class="info-box" aria-live="polite">
+        Select a disease to view more information.
+    </div>
+</section>
+
+<section class="section" id="weather">
+    <div class="section-heading">
+        <p class="tag">WEATHER INFORMATION</p>
+        <h2>Check Your Weather 🌦️</h2>
+        <p>Enter a city to retrieve current weather information.</p>
+    </div>
+
+    <div class="panel">
+        <label for="city">City name</label>
+        <input type="text" id="city" placeholder="Example: Kurnool">
+
+        <button class="btn" onclick="getWeather()">
+            Check Weather
+        </button>
+
+        <div id="weatherResult" class="results" aria-live="polite">
+            Weather information will appear here.
+        </div>
+
+        <p class="note">
+            Live weather requires an internet connection.
+        </p>
+    </div>
+</section>
+
+<section class="section light" id="irrigation">
+    <div class="section-heading">
+        <p class="tag">WATER MANAGEMENT</p>
+        <h2>Irrigation Guide 💧</h2>
+        <p>Explore general watering considerations for your farm.</p>
+    </div>
+
+    <div class="panel">
+        <label for="plant">Select crop</label>
+        <select id="plant">
+            <option value="rice">Rice</option>
+            <option value="cotton">Cotton</option>
+            <option value="tomato">Tomato</option>
+            <option value="millet">Millets</option>
+        </select>
+
+        <label for="moisture">Soil condition</label>
+        <select id="moisture">
+            <option value="dry">Dry</option>
+            <option value="normal">Moderately moist</option>
+            <option value="wet">Wet</option>
+        </select>
+
+        <button class="btn" onclick="irrigationGuide()">
+            Get Guidance
+        </button>
+
+        <div id="irrigationResult" class="results" aria-live="polite">
+            Select your crop and soil condition.
+        </div>
+    </div>
+
+    <p class="note">
+        Always consider rainfall, crop growth stage, drainage and local
+        agricultural advice before irrigating.
+    </p>
+</section>
+
+<footer>
+    <h2>🌾 FarmCare AI</h2>
+    <p>Technology for smarter and more sustainable farming.</p>
+    <p>Student Project | Built with HTML, CSS & JavaScript</p>
+    <p>© 2026 FarmCare AI</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

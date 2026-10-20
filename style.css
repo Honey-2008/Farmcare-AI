@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #24352b;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #123c2a;
+    color: white;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #a9e86e;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #a9e86e;
+}
+
+.hero {
+    min-height: 410px;
+    padding: 70px 10%;
+    background: linear-gradient(135deg, #e5f7dd, #b8e6ad);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tag {
+    color: #298044;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #247b3c;
+}
+
+.hero-content > p:not(.tag) {
+    max-width: 550px;
+    margin-bottom: 28px;
+    color: #4a6150;
+}
+
+.hero-icon {
+    font-size: clamp(90px, 16vw, 170px);
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #237b3e;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #14552a;
+    transform: translateY(-2px);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    padding: 35px 8%;
+}
+
+.stat-card {
+    padding: 24px 12px;
+    text-align: center;
+    background: white;
+    border: 1px solid #e1ebdf;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000008;
+}
+
+.stat-card h2 {
+    font-size: 35px;
+}
+
+.stat-card h3 {
+    margin: 8px 0;
+    color: #246a38;
+}
+
+.stat-card p {
+    color: #718076;
+    font-size: 13px;
+}
+
+.section {
+    padding: 65px 8%;
+}
+
+.light {
+    background: #f3f8f1;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.section-heading > p:last-child {
+    color: #718076;
+}
+
+.panel {
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border: 1px solid #e0e9df;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px #173b2010;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 7px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd8ca;
+    border-radius: 7px;
+    font-size: 15px;
+    background: white;
+}
+
+.panel .btn {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.results,
+.info-box {
+    margin-top: 22px;
+    padding: 20px;
+    background: #edf8e9;
+    border-radius: 9px;
+    color: #285437;
+    overflow-wrap: anywhere;
+}
+
+.results h3,
+.info-box h3 {
+    margin-bottom: 10px;
+}
+
+.results ul {
+    padding-left: 22px;
+}
+
+.results li {
+    margin: 7px 0;
+}
+
+.note {
+    max-width: 650px;
+    margin: 15px auto 0;
+    color: #6c796e;
+    font-size: 12px;
+}
+
+.disease-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.disease-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #e1e9df;
+    transition: 0.3s;
+}
+
+.disease-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px #00000010;
+}
+
+.disease-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.disease-card h3 {
+    margin-bottom: 10px;
+}
+
+.disease-card p {
+    color: #68766b;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.disease-card button {
+    background: none;
+    border: none;
+    color: #237b3e;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+footer {
+    background: #123c2a;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 6px 0;
+    color: #d4e7d7;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        text-align: center;
+        flex-direction: column-reverse;
+        padding: 45px 7%;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .disease-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 45px 6%;
+    }
+}
+
+@media (max-width: 380px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        padding: 20px;
+    }
+}
